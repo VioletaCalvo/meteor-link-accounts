@@ -5,7 +5,7 @@ if (Meteor.isClient) {
       throw new Meteor.Error(402, 'Please login to an existing account before link.');
     }
     if (Meteor.isCordova) {
-      if (Meteor.isCordova() && !Package['btafel:accounts-facebook-cordova']) {
+      if (!Package['btafel:accounts-facebook-cordova']) {
         throw new Meteor.Error(403, 'Please include btafel:accounts-facebook-cordova package or cordova-fb package')
       }
     } else {
